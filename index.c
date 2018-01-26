@@ -279,169 +279,6 @@ int main(void)
 
 	printf_s("\nYou have %u gold pieces (gp) to spend on your Magic-User.  Now it is time to buy some weapons and gear.\n\n", gold, ARRAY_SIZE);
 
-	/*
-	do
-	{
-		printf_s("Gold: %u    AC:%d      Armour: %s\n", gold, acModified, armour, ARRAY_SIZE);
-
-		printf_s("\nARMOUR          Cost      AC Adj\n", ARRAY_SIZE);
-
-		printf_s("1. Leather          6 gp      -1\n", ARRAY_SIZE);
-		printf_s("2. Studded Leather  30 gp     -2\n", ARRAY_SIZE);
-		printf_s("3. Scale mail       50 gp     -3\n", ARRAY_SIZE);
-		printf_s("4. Chainmail        70 gp     -4\n", ARRAY_SIZE);
-		printf_s("5. Splint Mail      75 gp     -5\n", ARRAY_SIZE);
-		printf_s("6. No Armour\n", ARRAY_SIZE);
-		printf_s("Please select 1 to 6\n", ARRAY_SIZE);
-
-		scanf(" %d", &choice);
-
-		switch (choice)
-		{
-		case 1:
-			if (gold > 6)
-			{
-				expense = 6;
-				gold -= expense;
-				strcpy(armour, "Leather");
-				armourValue = 1;
-				acModified -= armourValue;
-				printf_s("\nYou have purchased Leather Armour\n", ARRAY_SIZE);
-			}
-			else
-			{
-				printf_s("\nYou do not have enough gold for the armour\n", ARRAY_SIZE);
-			}
-
-			break;
-
-		case 2:
-			if (gold > 30)
-			{
-				expense = 30;
-				gold -= expense;
-				strcpy(armour, "Studded Leather");
-				armourValue = 2;
-				acModified -= armourValue;
-				printf_s("\nYou have purchased Studded Leather Armour\n", ARRAY_SIZE);
-			}
-			else
-			{
-				printf_s("\nYou do not have enough gold for the armour\n", ARRAY_SIZE);
-			}
-
-			break;
-
-		case 3:
-			if (gold > 50)
-			{
-				expense = 50;
-				gold -= expense;
-				strcpy(armour, "Scale mail");
-				armourValue = 3;
-				acModified -= armourValue;
-				printf_s("\nYou have purchased Scale mail Armour\n", ARRAY_SIZE);
-			}
-			else
-			{
-				printf_s("\nYou do not have enough gold for the armour\n", ARRAY_SIZE);
-			}
-
-			break;
-
-		case 4:
-			if (gold > 70)
-			{
-				expense = 70;
-				gold -= expense;
-				strcpy(armour, "Chainmail");
-				armourValue = 4;
-				acModified -= armourValue;
-				printf_s("\nYou have purchased Chainmail Armour\n", ARRAY_SIZE);
-			}
-			else
-			{
-				printf_s("\nYou do not have enough gold for the armour\n", ARRAY_SIZE);
-			}
-
-			break;
-
-		case 5:
-			if (gold > 75)
-			{
-				expense = 75;
-				gold -= expense;
-				strcpy(armour, "Splint mail");
-				armourValue = 5;
-				acModified -= armourValue;
-				printf_s("\nYou have purchased Splint mail Armour\n", ARRAY_SIZE);
-			}
-			else
-			{
-				printf_s("\nYou do not have enough gold for the armour\n", ARRAY_SIZE);
-			}
-
-			break;
-
-		case 6:
-			printf_s("\nYou have decided not to pruchase any armour\n", ARRAY_SIZE);
-			break;
-
-		default:
-			printf_s("\nIncorrection selection. Please choose 1 to 6.\n", ARRAY_SIZE);
-
-		}*/
-
-		/*Displays current inventory and gold*/
-/*
-		printf_s("\nGold: %u    AC:%d (%d)      Armour: %s\n", gold, acModified, armourClassBase, armour, ARRAY_SIZE);
-
-		printf_s("Would you like to keep the %s?\n1.yes\n2.no\n(please select 1 (yes) or 2 (no).\n", armour, ARRAY_SIZE);
-
-		scanf(" %d", &noYes);
-
-		if (noYes == 2)
-		{
-			gold += expense;
-			acModified += armourValue;
-			armourValue;
-			strcpy(armour, "  ");
-
-		}
-
-		expense = 0;
-
-	} while (noYes == 2);
-	*/
-	/*End of dowhile loop*/
-
-
-	/*Displays added armour and updated gold*/
-	//printf_s("\nGold: %u    AC:%d (%d)      Armour: %s\n", gold, acModified, armourClassBase, armour, ARRAY_SIZE);
-
-	/*Option of purchasing a shield if magicUser has at least 10 gp*/
-/*	if (gold >= 10)
-	{
-		noYes = 0;
-		printf_s("Would you like to add a shield for 10 gp (AC -1)?\n1.yes\n2.no\n(please select 1 (yes) or 2 (no).\n", ARRAY_SIZE);
-		scanf(" %d", &noYes);
-
-		if (noYes == 1)
-		{
-			expense = 10;
-			gold -= expense;
-			strcat(armour, ", Shield");
-			armourValue = 1;
-			acModified -= armourValue;
-			printf_s("\nYou have purchased a shield.\n", ARRAY_SIZE);
-
-			printf_s("\nGold: %u    AC:%d (%d)      Armour: %s\n", gold, acModified, armourClassBase, armour, ARRAY_SIZE);
-		}
-	}
-	*/
-
-	//printf_s("\nNow, let's purchase some weapons for your magicUser.\n", ARRAY_SIZE);
-
 	/*Function for adding weapons for magicUser*/
 	do
 	{
@@ -454,7 +291,7 @@ int main(void)
 		printf_s("1. Dagger           3 gp      1d4\n", ARRAY_SIZE);
 		printf_s("2. Silver Dagger   25 gp      1d4\n", ARRAY_SIZE);
 		printf_s("3. No Weapons\n", ARRAY_SIZE);
-		printf_s("Please select 1 to 11\n", ARRAY_SIZE);
+		printf_s("Please select 1 to 3\n", ARRAY_SIZE);
 
 		scanf(" %d", &choice);
 
@@ -497,7 +334,7 @@ int main(void)
 			break;
 
 		default:
-			printf_s("\nIncorrect selection. Please choose 1 to 11.\n", ARRAY_SIZE);
+			printf_s("\nIncorrect selection. Please choose 1 to 3.\n", ARRAY_SIZE);
 			break;
 
 		}
@@ -518,7 +355,7 @@ int main(void)
 
 
 
-	/*Function for adding gear for magicUser*/
+	/*Function for adding gear for Magic-User*/
 	do
 	{
 		choice = 0;
